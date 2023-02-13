@@ -3,14 +3,24 @@ import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 
 function MainTemplate(props) {
-    const {children, footerCourseName, footerCourseLink} = props;
+    const {
+        children,
+        footerCourseName, footerCourseLink,
+        navItems
+    } = props;
+
     return(
         <>
-        <Header />
+        <Header
+            logo={logo}
+            navItems={navItems}
+        />
+
             {children}
         <Footer
         courseName = {footerCourseName}
         courseLink = {footerCourseLink}
+        navItems={navItems}
         />
         </>
     )

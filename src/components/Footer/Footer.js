@@ -2,25 +2,41 @@ import React from "react";
 import unimib from "../../assets/img/logo-unimib.png";
 import disco from "../../assets/img/logo-unimib-disco.png";
 import style from "./Footer.module.css";
+import  {NavLink} from "react-router-dom";
 
 function Footer(props){
-    const {courseName, courseLink} = props;
+    const {courseName, courseLink, navItems} = props;
+
+    const itemList= navItems.map((item) => {
+        return (
+            <li key={item.url} className="nav-item">
+                <NavLink exact={item.exact}
+                         activeClassName={style.active}
+                         to={item.url}>
+                    {item.text}
+                </NavLink>
+            </li>
+        )
+     });
+
+
     return(
         <div className="container-fluid">
 
             <div className="row">
 
                 <div className="col">
-                    {/*<nav className={style.footerNav}>
+                    {<nav className={style.footerNav}>
 
                         <ul className="nav flex-column">
                             {itemList}
                         </ul>
 
-                    </nav>*/}
-                    NAVIGAZIONE - DA FARE
+                    </nav>}
+
 
                 </div>
+
 
                 <div className="col-md-auto">
 
