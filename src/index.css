@@ -1,0 +1,14 @@
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #dd092f;
+}
+
+
+a:hover {
+    text-decoration: none;
+    color: #f70931;
+}

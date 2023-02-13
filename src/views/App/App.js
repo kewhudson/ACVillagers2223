@@ -3,7 +3,10 @@ import MainTemplate from "../../components/MainTemplate/MainTemplate";
 
 function App() {
   return (
-    <MainTemplate/>
+    <MainTemplate
+    footerCourseName = "App Web: Progettazione e Sviluppo"
+    footerCourseLink = "https://elearning.unimib.it/course/view.php?id=44672"
+    />
   );
 }
 
