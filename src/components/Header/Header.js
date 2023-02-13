@@ -13,7 +13,7 @@ import {
     DropdownItem,
     NavbarText,
 } from 'reactstrap';
-import style from "./Header.module.css"
+import style from "./Header.module.css";
 
 function Header(args) {
     const [isOpen, setIsOpen] = useState(false);
