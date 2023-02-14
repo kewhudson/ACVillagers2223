@@ -3,8 +3,8 @@ import MainTemplate from "../../components/MainTemplate/MainTemplate";
 import Home from "../Home/Home";
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Info from "../Info/Info";
-import RegistryOffice from "../Registry office/RegistryOffice";
-import VillagerDetail from "../Villager Detail/VillagerDetail";
+import RegistryOffice from "../RegistryOffice/RegistryOffice";
+import VillagerDetail from "../VillagerDetail/VillagerDetail";
 import Logo from "../../assets/img/Animal_Crossing_Leaf.svg";
 
 function App() {

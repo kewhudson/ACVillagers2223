@@ -13,42 +13,49 @@ import {
     DropdownItem,
     NavbarText,
 } from 'reactstrap';
+import {NavLink as RouterLink} from "react-router-dom";
 import style from "./Header.module.css";
 
 function Header(args) {
+    const {logo, navItems} = props;
     const [isOpen, setIsOpen] = useState(false);
 
     const toggle = () => setIsOpen(!isOpen);
 
+    const itemList = navItems.map((item) => {
+        return (
+            <NavItem key={item.url} className={style.navItem}>
+                <RouterLink exact={item.exact}
+                            activeClassName={style.active}
+                            to={item.url}
+                            className={"nav-link"}>
+                    {item.text}
+                </RouterLink>
+
+            </NavItem>
+        )
+    });
+
     return (
-        <div>
-            <Navbar {...args}>
-                <NavbarBrand href="/">reactstrap</NavbarBrand>
+        <div className={style.navBar}>
+
+            <Navbar expand="md" full light>
+                <div className="container">
+                <NavbarBrand>
+                    <RouterLink to="/">
+                        <img className={style.logo} src={logo} alt=""/>
+                    </RouterLink>
+                </NavbarBrand>
+
                 <NavbarToggler onClick={toggle} />
+
                 <Collapse isOpen={isOpen} navbar>
-                    <Nav className="me-auto" navbar>
-                        <NavItem>
-                            <NavLink href="/components/">Components</NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink href="https://github.com/reactstrap/reactstrap">
-                                GitHub
-                            </NavLink>
-                        </NavItem>
-                        <UncontrolledDropdown nav inNavbar>
-                            <DropdownToggle nav caret>
-                                Options
-                            </DropdownToggle>
-                            <DropdownMenu right>
-                                <DropdownItem>Option 1</DropdownItem>
-                                <DropdownItem>Option 2</DropdownItem>
-                                <DropdownItem divider />
-                                <DropdownItem>Reset</DropdownItem>
-                            </DropdownMenu>
-                        </UncontrolledDropdown>
+                    <Nav className="mr-auto" navbar>
+                        {itemList}
                     </Nav>
-                    <NavbarText>Simple Text</NavbarText>
+
                 </Collapse>
+                </div>
             </Navbar>
         </div>
     );
