@@ -8,6 +8,8 @@ function VillagerDetail() {
 
     const [villagerData, setVillagerData] = useState([]);
 
+
+    /* API CALL */
     useEffect(() => {
 
         let isMounted = true;
@@ -23,6 +25,7 @@ function VillagerDetail() {
             isMounted = false;
         }
     }, [villagerID]);
+    /* FINE API CALL */
 
     return (
         <div>
@@ -34,6 +37,7 @@ function VillagerDetail() {
             }
 
             <img src={villagerData.image_uri}/>
+
         </div>
 
 
