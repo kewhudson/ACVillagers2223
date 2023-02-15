@@ -25,3 +25,10 @@ a:hover {
     text-decoration: underline;
     color: black;
 }
+
+footer{
+    background-image: url("../src/assets/img/background-AC-Terra.jpg");
+    background-repeat: repeat;
+    background-size: contain;
+    width: 100%;
+}
