@@ -13,6 +13,7 @@ function Footer(props){
             <li key={item.url} className="nav-item">
                 <NavLink exact={item.exact}
                          activeClassName={style.active}
+                         className={style.footerNavLink}
                          to={item.url}>
                     {item.text}
                 </NavLink>
@@ -23,7 +24,7 @@ function Footer(props){
 
     return(
         <footer className={style.footer}>
-        <img src={footerImg} className={'mb-4'}/>
+        <img src={footerImg} className={'mb-4'} alt={'Personaggi di Animal Crossing'}/>
         <div className="container-fluid">
 
             <div className="row">
