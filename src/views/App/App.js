@@ -6,7 +6,7 @@ import Info from "../Info/Info";
 import RegistryOffice from "../RegistryOffice/RegistryOffice";
 import VillagerDetail from "../VillagerDetail/VillagerDetail";
 import LogoNavBar from "../../assets/img/Animal_Crossing_Leaf.svg";
-import background from "../../assets/img/backgroundAC.jpg";
+import background from "../../assets/img/background-AC-Sfondo.jpg";
 
 function App() {
 
