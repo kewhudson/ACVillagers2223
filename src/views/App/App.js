@@ -5,14 +5,14 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Info from "../Info/Info";
 import RegistryOffice from "../RegistryOffice/RegistryOffice";
 import VillagerDetail from "../VillagerDetail/VillagerDetail";
-import Logo from "../../assets/img/Animal_Crossing_Leaf.svg";
+import LogoNavBar from "../../assets/img/Animal_Crossing_Leaf.svg";
 
 function App() {
 
   const nav = [
     {url: "/", text: "Home", exact: true},
-    {url: "/registryOffice", text: "RegistryOffice", exact: false},
-    {url: "/info", text: "Info", exact: true}
+    {url: "/RegistryOffice", text: "RegistryOffice", exact: false},
+    {url: "/Info", text: "Info", exact: true}
   ];
 
   return (
@@ -21,9 +21,8 @@ function App() {
               footerCourseName = "App Web: Progettazione e Sviluppo"
               footerCourseLink = "https://elearning.unimib.it/course/view.php?id=44672"
               navItems={nav}
-              logo={Logo}
+              logo={LogoNavBar}
           >
-
 
            <Switch>
              <Route exact path="/" component={Home} />
@@ -31,8 +30,6 @@ function App() {
              <Route exact path="/Info" component={Info}/>
              <Route exact path="/RegistryOffice/:number" component={VillagerDetail}/>
            </Switch>
-
-             <Home/>
 
          </MainTemplate>
       </BrowserRouter>

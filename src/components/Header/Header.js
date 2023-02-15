@@ -3,20 +3,14 @@ import {
     Collapse,
     Navbar,
     NavbarToggler,
-    NavbarBrand,
     Nav,
     NavItem,
     NavLink,
-    UncontrolledDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem,
-    NavbarText,
 } from 'reactstrap';
 import {NavLink as RouterLink} from "react-router-dom";
 import style from "./Header.module.css";
 
-function Header(args) {
+function Header(props) {
     const {logo, navItems} = props;
     const [isOpen, setIsOpen] = useState(false);
 
@@ -41,19 +35,19 @@ function Header(args) {
 
             <Navbar expand="md" full light>
                 <div className="container">
-                <NavbarBrand>
+
+
                     <RouterLink to="/">
-                        <img className={style.logo} src={logo} alt=""/>
+                        <img className={style.logo} src={logo} alt="Logo AC"/>
                     </RouterLink>
-                </NavbarBrand>
+
 
                 <NavbarToggler onClick={toggle} />
 
                 <Collapse isOpen={isOpen} navbar>
-                    <Nav className="mr-auto" navbar>
+                    <Nav className="mx-auto" navbar>
                         {itemList}
                     </Nav>
-
                 </Collapse>
                 </div>
             </Navbar>
