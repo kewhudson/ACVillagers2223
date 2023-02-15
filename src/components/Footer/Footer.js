@@ -3,6 +3,7 @@ import unimib from "../../assets/img/logo-unimib.png";
 import disco from "../../assets/img/logo-unimib-disco.png";
 import style from "./Footer.module.css";
 import  {NavLink} from "react-router-dom";
+import footerImg from "../../assets/img/background-AC-Personaggi.jpg"
 
 function Footer(props){
     const {courseName, courseLink, navItems} = props;
@@ -22,6 +23,7 @@ function Footer(props){
 
     return(
         <footer className={style.footer}>
+        <img src={footerImg} className={style.footerImg}/>
         <div className="container-fluid">
 
             <div className="row">
