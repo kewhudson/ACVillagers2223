@@ -5,12 +5,11 @@ import {
     NavbarToggler,
     Nav,
     NavItem,
-    NavLink,
 } from 'reactstrap';
 import {NavLink as RouterLink} from "react-router-dom";
 import style from "./Header.module.css";
 
-function Header(props) {
+const Header = (props) => {
     const {logo, navItems} = props;
     const [isOpen, setIsOpen] = useState(false);
 
@@ -22,7 +21,7 @@ function Header(props) {
                 <RouterLink exact={item.exact}
                             activeClassName={style.active}
                             to={item.url}
-                            className={"nav-link"}>
+                            className="nav-link">
                     {item.text}
                 </RouterLink>
 

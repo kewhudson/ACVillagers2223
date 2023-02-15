@@ -1,7 +1,7 @@
 import React from "react";
 import MainTemplate from "../../components/MainTemplate/MainTemplate";
 import Home from "../Home/Home";
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Info from "../Info/Info";
 import RegistryOffice from "../RegistryOffice/RegistryOffice";
 import VillagerDetail from "../VillagerDetail/VillagerDetail";
@@ -24,12 +24,12 @@ function App() {
               logo={LogoNavBar}
           >
 
-           <Switch>
-             <Route exact path="/" component={Home} />
-             <Route exact path="/RegistryOffice" component={RegistryOffice} />
-             <Route exact path="/Info" component={Info}/>
-             <Route exact path="/RegistryOffice/:number" component={VillagerDetail}/>
-           </Switch>
+           <Routes>
+             <Route path="/" component={Home} />
+             <Route path="/RegistryOffice" component={RegistryOffice} />
+             <Route path="/Info" component={Info}/>
+             <Route path="/RegistryOffice/:number" component={VillagerDetail}/>
+           </Routes>
 
          </MainTemplate>
       </BrowserRouter>

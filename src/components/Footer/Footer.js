@@ -21,6 +21,7 @@ function Footer(props){
 
 
     return(
+        <footer className={style.footer}>
         <div className="container-fluid">
 
             <div className="row">
@@ -67,6 +68,7 @@ function Footer(props){
             </div>
 
         </div>
+        </footer>
     )
 }
 
