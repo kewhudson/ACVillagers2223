@@ -23,7 +23,7 @@ function Footer(props){
 
     return(
         <footer className={style.footer}>
-        <img src={footerImg} className={style.footerImg}/>
+        <img src={footerImg} className={'mb-4'}/>
         <div className="container-fluid">
 
             <div className="row">
