@@ -25,10 +25,10 @@ function App() {
           >
 
            <Routes>
-             <Route path="/" component={Home} />
-             <Route path="/RegistryOffice" component={RegistryOffice} />
-             <Route path="/Info" component={Info}/>
-             <Route path="/RegistryOffice/:number" component={VillagerDetail}/>
+             <Route path="/" element={<Home />} />
+             <Route path="/RegistryOffice" element={<RegistryOffice />} />
+             <Route path="/Info" element={<Info />}/>
+             <Route path="/RegistryOffice/:number" element={<VillagerDetail />}/>
            </Routes>
 
          </MainTemplate>
