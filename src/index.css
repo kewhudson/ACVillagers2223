@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
 body{
-    background-size: cover;
     font-family: 'Quicksand', sans-serif;
     font-size: clamp(14px, 2vw,  22px);
     font-weight: normal;
     scroll-behavior: smooth;
+
+    background-image: url("../src/assets/img/background-AC-Sfondo.jpg");
+    background-repeat: repeat;
+    background-size: contain;
+    width: 100%;
 }
 
 img {

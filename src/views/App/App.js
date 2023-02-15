@@ -6,7 +6,6 @@ import Info from "../Info/Info";
 import RegistryOffice from "../RegistryOffice/RegistryOffice";
 import VillagerDetail from "../VillagerDetail/VillagerDetail";
 import LogoNavBar from "../../assets/img/Animal_Crossing_Leaf.svg";
-import background from "../../assets/img/background-AC-Sfondo.jpg";
 
 function App() {
 
@@ -17,7 +16,6 @@ function App() {
   ];
 
   return (
-      <div style={{ backgroundImage: `url(${background})` }}>
       <BrowserRouter>
          <MainTemplate
               footerCourseName = "App Web: Progettazione e Sviluppo"
@@ -35,8 +33,6 @@ function App() {
 
          </MainTemplate>
       </BrowserRouter>
-
-      </div>
   );
 }
 
