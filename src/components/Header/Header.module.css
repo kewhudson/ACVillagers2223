@@ -1,11 +1,13 @@
 .navBar {
     background: white;
-    border-bottom: 2px solid #dd092f;
     position: sticky;
     width: 100%;
     top: 0;
     z-index: 9;
 }
+
+
+
 
 .logo {
     max-width: 50px;
