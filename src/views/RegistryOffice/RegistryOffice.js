@@ -1,12 +1,33 @@
 import React, {useEffect, useState} from "react";
-import VillagerBaseData from "../../assets/data/villagerBaseData.json";
 import VillagerCardsGrid from "../../components/VillagerCardsGrid/VillagerCardsGrid";
 import VillagerTable from "../../components/VillagerTable/VillagerTable";
 import style from "./RegistryOffice.module.css";
 import clsx from "clsx";
 
 function RegistryOffice() {
+
     const [displayGrid, setDisplayGrid] = useState("true");
+    const [villagerData, setVillagerData] = useState("true");
+
+    /* API CALL */
+    useEffect(() => {
+
+        let isMounted = true;
+
+        fetch(`https://acnhapi.com/v1/villagers/`)
+            .then(res => res.json())
+            .then(res => {
+                if (isMounted)
+                    setVillagerData(res);
+            })
+            .catch((error) => console.log("Error" + error));
+        return () => {
+            isMounted = false;
+        }
+    }, []);
+    /* FINE API CALL */
+
+
 
     return (
         <div className="container">
@@ -34,10 +55,10 @@ function RegistryOffice() {
                     {
                         displayGrid ?
                             <VillagerCardsGrid
-                                VillagerList={VillagerBaseData}
+                                VillagerList={villagerData}
                                 col={{xs:1, sm:2, md:3, lg:4, xl:5}}
                             /> :
-                            <VillagerTable VillagerList={VillagerBaseData}/>
+                            <VillagerTable VillagerList={villagerData}/>
                     }
 
                 </div>
