@@ -36,7 +36,14 @@ function VillagerDetail() {
                 </div>
             }
 
-            <img src={villagerData.image_uri}/>
+
+            {villagerData.length !== 0 &&
+                <>
+                    <img src={villagerData.image_uri}/>
+                </>
+            }
+
+
 
         </div>
 
