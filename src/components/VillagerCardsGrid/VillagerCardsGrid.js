@@ -1,6 +1,6 @@
 import React from "react";
 import VillagerCard from "../VillagerCard/VillagerCard";
-import speciesTranslation from "../SpeciesTranslation/SpeciesTranslation";
+import speciesTranslation from "../../functions/SpeciesTranslation";
 
 
 function VillagerCardsGrid(props) {

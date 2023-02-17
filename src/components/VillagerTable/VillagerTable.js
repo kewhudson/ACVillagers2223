@@ -1,7 +1,7 @@
 import React from "react";
 import {NavLink} from "react-router-dom";
 import style from "./VillagerTable.module.css"
-import speciesTranslation from "../SpeciesTranslation/SpeciesTranslation";
+import speciesTranslation from "../../functions/SpeciesTranslation";
 
 function VillagerTable(props) {
     const {VillagerList} = props;
