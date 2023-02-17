@@ -10,14 +10,15 @@ function VillagerCard(props) {
 
     return(
        <NavLink to={`/RegistryOffice/${ID}`}>
-            <Card>
-                <CardImg top width="100%" src={immagine} alt={nome}/>
+            <Card className={style.CardVillager}>
+                <CardImg top width="100%" src={immagine} alt={nome} className={style.img}/>
                 <CardBody className="text-center">
-                    <CardTitle tag="h5" className={'h3'}>{nome}</CardTitle>
-                    <CardText>
+                    <CardTitle tag="h5" className={'h2'}>{nome}</CardTitle>
+                    <CardText className="fw-bold">
                         {ID}
+
                     </CardText>
-                    <div>
+                    <div className="fw-bold">
                         {specie}
                     </div>
                 </CardBody>

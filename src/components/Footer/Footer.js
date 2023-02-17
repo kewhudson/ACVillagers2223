@@ -42,7 +42,7 @@ function Footer(props){
                 </div>
 
 
-                <div className="col-md-auto">
+                <div className="col">
 
                     <div className={`d-flex ${style.copyright}`}>
 

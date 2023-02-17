@@ -1,5 +1,6 @@
 import React from "react";
 import {NavLink} from "react-router-dom";
+import style from "./VillagerTable.module.css"
 
 function VillagerTable(props) {
     const {VillagerList} = props;
@@ -8,7 +9,7 @@ function VillagerTable(props) {
 
     for(let villager = 0; villager < 391; villager ++){
         villagerTable.push(
-            <tr key={villager+1}>
+            <tr key={villager+1} className="d-flex flex-wrap justify-content-around align-items-center">
 
                     <td>
                         <NavLink to={`/RegistryOffice/${villager+1}`}>
@@ -35,19 +36,21 @@ function VillagerTable(props) {
     }
 
     return (
-        <table>
-            <thead>
-            <tr>
+        <div className={style.table}>
+        <table className="d-flex flex-column" >
+            <thead className="mb-2 mt-5 px-4">
+            <tr className="d-flex flex-wrap justify-content-around">
                 <th>ID</th>
                 <th>Nome</th>
                 <th>Immagine</th>
-                <th>Specie</th>
+                <th className="allineamento">Specie</th>
             </tr>
             </thead>
-            <tbody>
+            <tbody className="my-4 px-4">
             {villagerTable}
             </tbody>
         </table>
+        </div>
     );
 }
 

@@ -7,10 +7,11 @@
 .option {
     display: inline-block;
 padding: 4px 16px;
-    background: cadetblue;
+    background: #E8F4EA;
     cursor: pointer;
-    border: 1px solid darkblue;
+
     color: #242424;
+    font-weight: bold;
 }
 
 .option:first-child {
@@ -24,6 +25,7 @@ padding: 4px 16px;
 }
 
 .option.active {
-    background-color: darkblue;
-    color: white;
+    background-color: #3AB09E;
+    color: black;
+    font-weight: bold;
 }
