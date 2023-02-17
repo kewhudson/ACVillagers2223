@@ -65,7 +65,8 @@ function RegistryOffice() {
                                     <VillagerTable VillagerList={Object.values(villagerData)}/>
                             }
                         </div> :
-                <h1>ATTENDI</h1>
+
+                        <h1>ATTENDI</h1> /*METTERE LOGO DI CARICAMENTO*/
                 }
             </div>
 
