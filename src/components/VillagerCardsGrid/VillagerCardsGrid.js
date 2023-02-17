@@ -1,20 +1,23 @@
 import React from "react";
 import VillagerCard from "../VillagerCard/VillagerCard";
+import speciesTranslation from "../SpeciesTranslation/SpeciesTranslation";
 
 
 function VillagerCardsGrid(props) {
     const {VillagerList, col} = props;
 
     const villagerCardsGrid = [];
+    /*let specieTrad = "";*/
 
-    for(let villager = 0; villager < 391; villager ++){
+    for(let villager = 0; villager < VillagerList.length; villager ++){
+        /*specieTrad = speciesTranslation(VillagerList[villager]['species'])*/
         villagerCardsGrid.push(
             <div key={villager+1} className="col">
                 <VillagerCard
                     nome ={VillagerList[villager]['name']['name-EUit']}
                     ID ={VillagerList[villager]['id']}
                     immagine ={VillagerList[villager]['icon_uri']}
-                    specie ={VillagerList[villager]['species']}
+                    specie = {speciesTranslation(VillagerList[villager]['species'])}
                 />
             </div>
         );
