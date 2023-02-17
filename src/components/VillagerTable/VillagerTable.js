@@ -1,13 +1,14 @@
 import React from "react";
 import {NavLink} from "react-router-dom";
 import style from "./VillagerTable.module.css"
+import speciesTranslation from "../SpeciesTranslation/SpeciesTranslation";
 
 function VillagerTable(props) {
     const {VillagerList} = props;
 
     const villagerTable = [];
 
-    for(let villager = 0; villager < 391; villager ++){
+    for(let villager = 0; villager < VillagerList.length; villager ++){
         villagerTable.push(
             <tr key={villager+1} className="d-flex flex-wrap justify-content-around align-items-center">
 
@@ -28,7 +29,7 @@ function VillagerTable(props) {
                     </td>
                     <td>
                         <NavLink to={`/RegistryOffice/${villager+1}`}>
-                            {VillagerList[villager]['species']}
+                            {speciesTranslation(VillagerList[villager]['species'])}
                         </NavLink>
                     </td>
             </tr>
