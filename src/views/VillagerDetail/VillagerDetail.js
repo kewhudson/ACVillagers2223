@@ -34,7 +34,7 @@ function VillagerDetail(props) {
     return (
         <div>
             {villagerData.length === 0 &&
-                <div className={"text-center"}>
+                <div className={"text-center"}>                     /*METTERE LOGO DI CARICAMENTO*/
                     <h1>Sto per visualizzare il Villager #{villagerID}</h1>
                     <h2>CARICAMENTO CARICAMENTO CARICAMENTO</h2>
                 </div>
@@ -43,7 +43,6 @@ function VillagerDetail(props) {
 
             {villagerData.length !== 0 &&
                 <>
-                <NavLink to={`/RegistryOffice/${ID}`}>
                     <Card>
                         <CardImg top width="100%" src={villagerData.image_uri} alt={nome} className={style.img}/>
                         <CardBody className="text-center">
@@ -57,7 +56,6 @@ function VillagerDetail(props) {
                             </div>
                         </CardBody>
                     </Card>
-                </NavLink>
                 </>
             }
 
