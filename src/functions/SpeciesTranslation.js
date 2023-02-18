@@ -1,8 +1,8 @@
-function SpeciesTranslation(props){
+function SpeciesTranslation(specie){
 
     let speciesTrad;
 
-    switch (props) {
+    switch (specie) {
         case "Alligator": speciesTrad = "Coccodrillo"; break;
         case "Anteater": speciesTrad = "Formichiere"; break;
         case "Bear": speciesTrad = "Orso"; break;
@@ -36,10 +36,7 @@ function SpeciesTranslation(props){
         case "Tiger": speciesTrad = "Tigre"; break;
         case "Wolf": speciesTrad = "Lupo"; break;
 
-
-
-
-        default: speciesTrad = props;
+        default: speciesTrad = specie;
     }
 
     return speciesTrad;
