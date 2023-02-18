@@ -1,11 +1,10 @@
 import React, {useEffect, useState} from "react";
-import {NavLink, useParams} from "react-router-dom";
-import {Card, CardBody, CardImg, CardText, CardTitle} from "reactstrap";
-import style from "../../components/VillagerCard/VillagerCard.module.css";
+import {useParams} from "react-router-dom";
+import style from "./VillagerDetail.module.css";
 
 
 function VillagerDetail(props) {
-    const {nome, ID, image_uri, specie} = props;
+
 
     let {number} = useParams();
     let villagerID = parseInt(number);
@@ -42,21 +41,40 @@ function VillagerDetail(props) {
 
 
             {villagerData.length !== 0 &&
-                <>
-                    <Card>
-                        <CardImg top width="100%" src={villagerData.image_uri} alt={nome} className={style.img}/>
-                        <CardBody className="text-center">
-                            <CardTitle tag="h5" className={'h2'}>{nome}</CardTitle>
-                            <CardText className="fw-bold">
-                                {ID}
+                    <div className="container">
+                        <div className="row justify-content-center">
+                            <div className="col-1"> </div>
 
-                            </CardText>
-                            <div className="fw-bold">
-                                {specie}
+                            <div className="col-3">
+                                <div className={style.polaroid}>
+                                <img src={villagerData.image_uri} className={style.imgPolaroid}/>
+                                </div>
                             </div>
-                        </CardBody>
-                    </Card>
-                </>
+
+                            <div className="col-7">
+                                <h2> {villagerData['name']['name-EUit']}</h2>
+
+                                <ul>
+                                    <li> Specie: {villagerData['species']}</li>
+                                    <li> Compleanno: {villagerData['birthday']}</li>
+                                    <li> Genere: {villagerData['gender']} </li>
+                                    <li> Personalità: {villagerData['personality']} </li>
+                                </ul>
+
+                            </div>
+                        </div>
+
+                        <div className="row border">
+                            <div className="col">
+
+                                <p> Motto: {villagerData['catch-phrase']}</p>
+                                <p> La sua citazione: "{villagerData['saying']}"</p>
+
+                            </div>
+                        </div>
+
+                    </div>
+
             }
 
 
