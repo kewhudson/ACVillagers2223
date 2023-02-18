@@ -1,10 +1,12 @@
 import React, {useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
 import style from "./VillagerDetail.module.css";
+import speciesTranslation from "../../functions/SpeciesTranslation";
+import personalitiesTranslation from "../../functions/PersonalitiesTranslation";
+import genderTranslation from "../../functions/GenderTranslation";
 
 
-function VillagerDetail(props) {
-
+function VillagerDetail() {
 
     let {number} = useParams();
     let villagerID = parseInt(number);
@@ -31,9 +33,10 @@ function VillagerDetail(props) {
     /* FINE API CALL */
 
     return (
+        /*METTERE LOGO DI CARICAMENTO*/
         <div>
             {villagerData.length === 0 &&
-                <div className={"text-center"}>                     /*METTERE LOGO DI CARICAMENTO*/
+                <div className={"text-center"}>
                     <h1>Sto per visualizzare il Villager #{villagerID}</h1>
                     <h2>CARICAMENTO CARICAMENTO CARICAMENTO</h2>
                 </div>
@@ -47,18 +50,18 @@ function VillagerDetail(props) {
 
                             <div className="col-3">
                                 <div className={style.polaroid}>
-                                <img src={villagerData.image_uri} className={style.imgPolaroid}/>
+                                <img src={villagerData['image_uri']} className={style['imgPolaroid']} alt={villagerData.name}/>
                                 </div>
                             </div>
 
                             <div className="col-7">
-                                <h2> {villagerData['name']['name-EUit']}</h2>
+                                <h1 style={{color: villagerData['bubble-color']}} className='fw-bold'> {villagerData['name']['name-EUit']}</h1>
 
                                 <ul>
-                                    <li> Specie: {villagerData['species']}</li>
-                                    <li> Compleanno: {villagerData['birthday']}</li>
-                                    <li> Genere: {villagerData['gender']} </li>
-                                    <li> Personalità: {villagerData['personality']} </li>
+                                    <li> <span className='fw-bold'>Specie:</span> {speciesTranslation(villagerData['species'])}</li>
+                                    <li> <span className='fw-bold'>Compleanno</span>: {villagerData['birthday']}</li>
+                                    <li> <span className='fw-bold'>Genere:</span> {genderTranslation(villagerData['gender'])} </li>
+                                    <li> <span className='fw-bold'>Personalità:</span> {personalitiesTranslation(villagerData['personality'])} </li>
                                 </ul>
 
                             </div>
@@ -67,8 +70,8 @@ function VillagerDetail(props) {
                         <div className="row border">
                             <div className="col">
 
-                                <p> Motto: {villagerData['catch-phrase']}</p>
-                                <p> La sua citazione: "{villagerData['saying']}"</p>
+                                <p><span className='fw-bold'>Motto:</span> {villagerData['catch-translations']['catch-EUit']}</p>
+                                <p><span className='fw-bold'>La sua citazione:</span> "{villagerData['saying']}"</p>
 
                             </div>
                         </div>
