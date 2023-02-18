@@ -11,7 +11,7 @@ function App() {
 
   const nav = [
     {url: "/", text: "Home", exact: true},
-    {url: "/RegistryOffice", text: "Registry Office", exact: false},
+    {url: "/RegistryOffice", text: "Abitanti", exact: false},
     {url: "/Info", text: "Info", exact: true}
   ];
 

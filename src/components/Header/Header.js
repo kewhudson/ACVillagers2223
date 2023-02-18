@@ -3,7 +3,6 @@ import {
     Collapse,
     Navbar,
     NavbarToggler,
-    NavbarBrand,
     Nav,
     NavItem,
 } from 'reactstrap';
@@ -12,6 +11,7 @@ import style from "./Header.module.css";
 
 const Header = (props) => {
     const {logo, navItems} = props;
+    
     const [isOpen, setIsOpen] = useState(false);
 
     const toggle = () => setIsOpen(!isOpen);
