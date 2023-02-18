@@ -12,7 +12,7 @@ function VillagerCardsGrid(props) {
     for(let villager = 0; villager < VillagerList.length; villager ++){
         /*specieTrad = speciesTranslation(VillagerList[villager]['species'])*/
         villagerCardsGrid.push(
-            <div key={villager+1} className="col">
+            <div key={villager+1} className="col mx-auto">
                 <VillagerCard
                     nome ={VillagerList[villager]['name']['name-EUit']}
                     ID ={VillagerList[villager]['id']}

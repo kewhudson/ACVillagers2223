@@ -9,14 +9,14 @@ function Home() {
         <div className="container">
              <div className="row justify-content-center">
                  <div className="col">
-                     <h1 className='text-center'>Ti presentiamo i nostri Abitanti preferiti</h1>
+                     <h1 className='text-center mb-5'>Ti presentiamo i nostri Abitanti preferiti</h1>
 
                      <VillagerCardsGrid
                          VillagerList={Object.values(villagerPreferiti)}
-                         col={{xs: 1, sm: 2, md: 2, lg: 3, xl: 3}}
+                         col={{xs: 1, sm: 2, md: 3, lg: 3, xl: 3}}
                      />
 
-                     <NavLink className="button" to="/RegistryOffice">Guarda l'elenco completo</NavLink>
+                     <div className='mt-3 mb-5 text-center'><NavLink className="button" to="/RegistryOffice">Guarda l'elenco completo</NavLink></div>
 
                      <h1 className='text-center'>Oggi è il compleanno di: </h1>
 
