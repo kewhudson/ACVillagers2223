@@ -45,18 +45,19 @@ function VillagerDetail() {
 
             {villagerData.length !== 0 &&
                     <div className="container">
-                        <div className="row justify-content-center align-items-center mt-4">
-                            <div className="col-md-2"> </div>
+                        <div className="row  align-items-center mt-4">
+                            <div className="col-2 col-xs-0"> </div>
 
-                            <div className="col-md-3">
+
+                            <div className="col-3 d-flex justify-content-center">
                                 <div className={style.polaroid}>
                                 <img src={villagerData.image_uri} className={style.imgPolaroid}/>
                                 </div>
                             </div>
 
-                            <div className="col-md-1"> </div>
-                            <div className="col-md-4">
+                            <div className="col-1 "> </div>
 
+                            <div className="col-4 d-flex flex-column justify-content-center">
                                 <h2 className="fw-bold "> {villagerData['name']['name-EUit']}</h2>
 
                                 <ul className={style.caratteristiche}>
@@ -66,7 +67,9 @@ function VillagerDetail() {
                                     <li className={style.cuore}> <span className='fw-bold'>Personalità:</span> {personalitiesTranslation(villagerData['personality'])} </li>
                                 </ul>
 
-                                </div>
+                            </div>
+
+                            <div className="col-2"> </div>
 
                         </div>
 

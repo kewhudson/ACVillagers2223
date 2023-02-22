@@ -93,16 +93,26 @@ margin: 20px;
 
 
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 992px) {
   .imgPolaroid {
     width: 70vw;
   }
 
   .polaroid {
     padding: 8px 12px 26px 12px;
-    width: 200px;
+    width: 160px;
+    display: flex;
+    margin-bottom: 5vw;
 
   }
+
+  .caratteristiche {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+
 }
 
 
