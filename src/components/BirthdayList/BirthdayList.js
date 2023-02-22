@@ -46,6 +46,9 @@ function BirthdayList() {
 
                         }
                     }
+                    if (birthdayTemp.length === 0){
+                        birthdayTemp.push(<h2>Sembra che oggi nessuno compia gli anni!</h2>);
+                    }
                     setBirthdayData(birthdayTemp);
                 }
             })

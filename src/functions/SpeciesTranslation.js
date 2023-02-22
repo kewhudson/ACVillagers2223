@@ -9,6 +9,7 @@ function SpeciesTranslation(specie){
         case "Bird": speciesTrad = "Uccello"; break;
         case "Bull": speciesTrad = "Toro"; break;
         case "Cat": speciesTrad = "Gatto"; break;
+        case "Chicken": speciesTrad = "Pollo"; break;
         case "Cow": speciesTrad = "Mucca"; break;
         case "Cub": speciesTrad = "Orsetto"; break;
         case "Deer": speciesTrad = "Cervo"; break;
