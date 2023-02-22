@@ -1,7 +1,109 @@
 .polaroid{
-  padding: 30px 30px 70px 30px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+  padding: 20px 30px 70px 30px;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, .3);
     max-width: 100%;
     background-color: #FDF5E6;
+  transform: rotate(-0.02turn);
+
 }
+
+.imgPolaroid {
+  width: 20vw;
+}
+
+.caratteristiche {
+  padding: 8px 8px 8px 8px;
+  list-style-position: inside;
+}
+
+li{
+  list-style: none;
+  position: relative;
+  padding: 0px 0 0 24px;
+}
+
+.cuore::before, .cuore::after{
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 5px;
+  width: 7px;
+  height: 12px;
+  background:  #3AB09E;
+  border-radius: 50px 50px 0 0;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+  margin-top: 0.2vw;
+}
+.cuore::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+
+.thought {
+  display:flex;
+  background-color:#3AB09E;
+  padding: 24px 20px 16px 20px;
+  border-radius:30px;
+  min-width:40px;
+  max-width:220px;
+  min-height:40px;
+margin: 20px;
+  position:relative;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+
+}
+.thought:before,
+.thought:after {
+  content:"";
+  background-color:#3AB09E;
+  border-radius:50%;
+  display:block;
+  position:absolute;
+  z-index:-1;
+}
+.thought:before {
+  width:44px;
+  height:44px;
+  top:-12px;
+  left:28px;
+  box-shadow:-50px 30px 0 -12px #3AB09E;
+}
+.thought:after {
+  bottom:-10px;
+  right:26px;
+  width:30px;
+  height:30px;
+  box-shadow:40px -34px 0 0 #3AB09E,
+  -28px -6px 0 -2px #3AB09E,
+  -24px 17px 0 -6px #3AB09E,
+  -5px 25px 0 -10px #3AB09E;
+
+}
+
+
+
+
+
+
+@media screen and (max-width: 1200px) {
+  .imgPolaroid {
+    width: 70vw;
+  }
+
+  .polaroid {
+    padding: 8px 12px 26px 12px;
+    width: 200px;
+
+  }
+}
+
+
 

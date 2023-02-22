@@ -8,6 +8,7 @@ import genderTranslation from "../../functions/GenderTranslation";
 
 function VillagerDetail() {
 
+
     let {number} = useParams();
     let villagerID = parseInt(number);
 
@@ -33,10 +34,9 @@ function VillagerDetail() {
     /* FINE API CALL */
 
     return (
-        /*METTERE LOGO DI CARICAMENTO*/
         <div>
             {villagerData.length === 0 &&
-                <div className={"text-center"}>
+                <div className={"text-center"}>                     /*METTERE LOGO DI CARICAMENTO*/
                     <h1>Sto per visualizzare il Villager #{villagerID}</h1>
                     <h2>CARICAMENTO CARICAMENTO CARICAMENTO</h2>
                 </div>
@@ -45,35 +45,37 @@ function VillagerDetail() {
 
             {villagerData.length !== 0 &&
                     <div className="container">
-                        <div className="row justify-content-center">
-                            <div className="col-1"> </div>
+                        <div className="row justify-content-center align-items-center mt-4">
+                            <div className="col-md-2"> </div>
 
-                            <div className="col-3">
+                            <div className="col-md-3">
                                 <div className={style.polaroid}>
-                                <img src={villagerData['image_uri']} className={style['imgPolaroid']} alt={villagerData.name}/>
+                                <img src={villagerData.image_uri} className={style.imgPolaroid}/>
                                 </div>
                             </div>
 
-                            <div className="col-7">
-                                <h1 style={{color: villagerData['bubble-color']}} className='fw-bold'> {villagerData['name']['name-EUit']}</h1>
+                            <div className="col-md-1"> </div>
+                            <div className="col-md-4">
 
-                                <ul>
-                                    <li> <span className='fw-bold'>Specie:</span> {speciesTranslation(villagerData['species'])}</li>
-                                    <li> <span className='fw-bold'>Compleanno</span>: {villagerData['birthday']}</li>
-                                    <li> <span className='fw-bold'>Genere:</span> {genderTranslation(villagerData['gender'])} </li>
-                                    <li> <span className='fw-bold'>Personalità:</span> {personalitiesTranslation(villagerData['personality'])} </li>
+                                <h2 className="fw-bold "> {villagerData['name']['name-EUit']}</h2>
+
+                                <ul className={style.caratteristiche}>
+                                    <li className={style.cuore}> <span className='fw-bold'>Specie:</span> {speciesTranslation(villagerData['species'])}</li>
+                                    <li className={style.cuore}> <span className='fw-bold'>Compleanno</span>: {villagerData['birthday']}</li>
+                                    <li className={style.cuore}> <span className='fw-bold'>Genere:</span> {genderTranslation(villagerData['gender'])} </li>
+                                    <li className={style.cuore}> <span className='fw-bold'>Personalità:</span> {personalitiesTranslation(villagerData['personality'])} </li>
                                 </ul>
 
-                            </div>
+                                </div>
+
                         </div>
 
-                        <div className="row border">
-                            <div className="col">
-
-                                <p><span className='fw-bold'>Motto:</span> {villagerData['catch-translations']['catch-EUit']}</p>
-                                <p><span className='fw-bold'>La sua citazione:</span> "{villagerData['saying']}"</p>
-
+                        <div className="row mt-5">
+                            <div className="col d-flex flex-column align-items-center">
+                                <div className={style.thought}> <p className="text-center"><span className='fw-bold'>Motto:</span> {villagerData['catch-translations']['catch-EUit']}</p>  </div>
+                                <p  className="text-center mt-4"><span className='fw-bold'>La sua citazione:</span> "{villagerData['saying']}"</p>
                             </div>
+
                         </div>
 
                     </div>
