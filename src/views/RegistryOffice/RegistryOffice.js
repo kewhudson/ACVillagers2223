@@ -8,21 +8,27 @@ function RegistryOffice() {
 
     const [displayGrid, setDisplayGrid] = useState("true");
     const [villagerData, setVillagerData] = useState([]);
+    const [apiError, setApiError] = useState(false);
+
 
     /* API CALL */
     useEffect(() => {
 
         let isMounted = true;
 
-
         fetch(`https://acnhapi.com/v1/villagers/`)
             .then(res => res.json())
             .then(res => {
                 if (isMounted){
+                    setApiError(false);
                     setVillagerData(res);
                 }
             })
-            .catch((error) => console.log("Error" + error));
+            .catch((error) =>
+            {
+                console.log("Error" + error)
+                setApiError(true);
+            });
         return () => {
             isMounted = false;
         }
@@ -52,22 +58,28 @@ function RegistryOffice() {
             </div>
 
             <div className="row justify-content-center">
-                {
-                    villagerData.length !== 0 ?
-                        <div className="col">
+                    {
+                        villagerData.length !== 0 ?
+                            <div className="col">
 
-                            {
-                                displayGrid ?
-                                    <VillagerCardsGrid
-                                        VillagerList={Object.values(villagerData)}
-                                        col={{xs: 1, sm: 2, md: 3, lg: 4, xl: 5}}
-                                    /> :
-                                    <VillagerTable VillagerList={Object.values(villagerData)}/>
-                            }
-                        </div> :
-
-                        <h1>ATTENDI</h1> /*METTERE LOGO DI CARICAMENTO*/
-                }
+                                {
+                                    displayGrid ?
+                                        <VillagerCardsGrid
+                                            VillagerList={Object.values(villagerData)}
+                                            col={{xs: 1, sm: 2, md: 3, lg: 4, xl: 5}}
+                                        /> :
+                                        <VillagerTable VillagerList={Object.values(villagerData)}/>
+                                }
+                            </div> :
+                            /*METTERE LOGO DI CARICAMENTO*/
+                            <div>
+                                {   apiError === false ?
+                                    <h1>ATTENDI</h1>
+                                    :
+                                    <h3 className='text-center'>Si è verificato un errore con il reperimento da API</h3>
+                                }
+                            </div>
+                    }
             </div>
 
         </div>

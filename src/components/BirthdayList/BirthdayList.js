@@ -9,6 +9,7 @@ function BirthdayList() {
     const date = new Date();
 
     const [birthdayData, setBirthdayData] = useState([]);
+    const [apiError, setApiError] = useState(false);
 
     let birthdayTemp = [];
 
@@ -25,6 +26,7 @@ function BirthdayList() {
             .then(res => res.json())
             .then(res => {
                 if (isMounted){
+                    setApiError(false);
                     for(let villager = 0; villager < Object.values(res).length; villager ++){
                         if(Object.values(res)[villager]['birthday'] === currentDate){
                             birthdayTemp.push(
@@ -52,7 +54,11 @@ function BirthdayList() {
                     setBirthdayData(birthdayTemp);
                 }
             })
-            .catch((error) => console.log("Error" + error));
+            .catch((error) =>
+            {
+                console.log("Error" + error)
+                setApiError(true);
+            });
         return () => {
             isMounted = false;
         }
@@ -62,14 +68,24 @@ function BirthdayList() {
 
 
     return(
-        <>{
-            birthdayData.length !== 0 ?
-        <div className={`row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 mt-5`}>
-            {birthdayData}
-        </div> :
+        <>
+            {
+                    birthdayData.length !== 0 ?
+                        <div className={`row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 mt-5`}>
+                            {birthdayData}
+                        </div>
 
-            <h1>ATTENDI</h1> /*METTERE LOGO DI CARICAMENTO*/
-        }
+                        :
+                        /*METTERE LOGO DI CARICAMENTO*/
+                        <div>
+                    {
+                        apiError === false ?
+                        <h3>ATTENDI</h3>
+                        :
+                        <h3 className='text-center'>Si è verificato un errore con il reperimento da API</h3>
+                    }
+                        </div> /*METTERE LOGO DI CARICAMENTO*/
+            }
 
         </>
 
