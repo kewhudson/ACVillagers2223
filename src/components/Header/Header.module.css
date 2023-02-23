@@ -1,6 +1,6 @@
 .navBar {
     background: white url("../../assets/img/ac-sky.png");
-
+    background-size: cover;
     width: 100%;
     position: sticky;
     top: 0;
@@ -19,5 +19,4 @@
 .navItem a {
     font-weight: bold;
     padding: 5px 30px !important;
-    color: #242424 !important;
 }

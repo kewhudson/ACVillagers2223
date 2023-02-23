@@ -32,3 +32,21 @@ footer{
     background-size: contain;
     width: 100%;
 }
+
+.activeRouterLink, .activeRouterLink:hover{
+    text-decoration: underline !important;
+    color: black;
+}
+.activeRouterLink>.itemLogoIcon, :not(.activeRouterLink):hover>.itemLogoIcon{
+    width: clamp(14px, 2vw,  24px);
+    margin-right: 5px;
+    transition: all 500ms;
+}
+:not(.activeRouterLink)>.itemLogoIcon{
+    width: 0;
+    transition: all 500ms;
+}
+
+:not(.activeRouterLink), :not(.activeRouterLink):hover{
+color: black;
+}

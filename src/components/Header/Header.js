@@ -9,10 +9,10 @@ import {
 } from 'reactstrap';
 import {NavLink as RouterLink} from "react-router-dom";
 import style from "./Header.module.css";
+import itemLogo from "../../assets/img/bells-icon-24x24.png";
 
 const Header = (props) => {
     const {logo, navItems} = props;
-    
     const [isOpen, setIsOpen] = useState(false);
 
     const toggle = () => setIsOpen(!isOpen);
@@ -21,9 +21,11 @@ const Header = (props) => {
         return (
             <NavItem key={item.url} className={style.navItem}>
                 <RouterLink exact={item.exact}
-                            activeClassName="active"
-                            to={item.url}
-                            className="nav-link">
+                            className={({ isActive }) =>
+                                isActive ? "activeRouterLink nav-link" : "nav-link"}
+                                to={item.url}
+                            >
+                    <img src={itemLogo} alt="Bells icon" className="itemLogoIcon"/>
                     {item.text}
                 </RouterLink>
 
