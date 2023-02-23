@@ -1,0 +1,5 @@
+.img{
+    width: clamp(200px, 40vw, 500px);
+    display: block;
+    margin: 20px auto;
+}
