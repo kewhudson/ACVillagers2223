@@ -1,19 +1,18 @@
 .navBar {
-    background: white;
-    position: sticky;
+    background: white url("../../assets/img/ac-sky.png");
     width: 100%;
+    position: sticky;
     top: 0;
     z-index: 10;
 }
 
 .logo {
-    max-width: 50px;
-    transition: all .2s;
+    width: 50px;
+    transition: all 1000ms;
 }
 
 .logo:hover {
-    transform: rotate(360deg);
-    filter: invert(14%) sepia(67%) saturate(7456%) hue-rotate(345deg) brightness(97%) contrast(100%);
+    transform: rotate(-25deg);
 }
 
 .navItem a {
