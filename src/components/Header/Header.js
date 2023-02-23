@@ -3,8 +3,9 @@ import {
     Collapse,
     Navbar,
     NavbarToggler,
+    NavbarBrand,
     Nav,
-    NavItem,
+    NavItem
 } from 'reactstrap';
 import {NavLink as RouterLink} from "react-router-dom";
 import style from "./Header.module.css";
@@ -34,20 +35,21 @@ const Header = (props) => {
         <div className={style.navBar}>
 
             <Navbar expand="md" light>
-                <div className="container-fluid container-xxl">
-                        <RouterLink to="/">
-                            <img className={style.logo} src={logo} alt="Logo AC"/>
-                        </RouterLink>
+                <NavbarBrand>
+                    <RouterLink to="/">
+                        <img className={style.logo} src={logo} alt="Logo AC"/>
+                    </RouterLink>
+                </NavbarBrand>
 
-                        <NavbarToggler onClick={toggle} className="me-0"  />
+                <NavbarToggler onClick={toggle} />
 
-                        <Collapse isOpen={isOpen} navbar>
-                            <Nav className="mx-auto" navbar>
-                                {itemList}
-                            </Nav>
-                        </Collapse>
-                </div>
+                <Collapse isOpen={isOpen} navbar>
+                    <Nav className="mx-auto" navbar>
+                        {itemList}
+                    </Nav>
+                </Collapse>
             </Navbar>
+
         </div>
     );
 }
