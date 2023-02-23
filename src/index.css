@@ -35,7 +35,7 @@ footer{
 
 .activeRouterLink, .activeRouterLink:hover{
     text-decoration: underline !important;
-    color: black;
+    color: black !important;
 }
 .activeRouterLink>.itemLogoIcon, :not(.activeRouterLink):hover>.itemLogoIcon{
     width: clamp(14px, 2vw,  24px);
