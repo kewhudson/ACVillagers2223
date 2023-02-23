@@ -35,7 +35,6 @@ const Header = (props) => {
 
             <Navbar expand="md" light>
                 <div className="container-fluid container-xxl">
-
                         <RouterLink to="/">
                             <img className={style.logo} src={logo} alt="Logo AC"/>
                         </RouterLink>
@@ -47,7 +46,6 @@ const Header = (props) => {
                                 {itemList}
                             </Nav>
                         </Collapse>
-
                 </div>
             </Navbar>
         </div>
