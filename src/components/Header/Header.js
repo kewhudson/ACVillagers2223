@@ -21,7 +21,7 @@ const Header = (props) => {
         return (
             <NavItem key={item.url} className={style.navItem}>
                 <RouterLink exact={item.exact}
-                            activeClassName={style.active}
+                            activeClassName="active"
                             to={item.url}
                             className="nav-link">
                     {item.text}
@@ -32,9 +32,9 @@ const Header = (props) => {
     });
 
     return (
-        <div className={style.navBar}>
+        <div className={style.navBar} >
 
-            <Navbar expand="md" light>
+            <Navbar expand="md" light className="container">
                 <NavbarBrand>
                     <RouterLink to="/">
                         <img className={style.logo} src={logo} alt="Logo AC"/>
