@@ -18,8 +18,6 @@ function Home() {
 
                      <div className='mt-3 mb-5 text-center'><NavLink className="button" to="/RegistryOffice">Guarda l'elenco completo</NavLink></div>
 
-                     <h1 className='text-center'>Oggi è il compleanno di: </h1>
-
                      <BirthdayList />
                  </div>
              </div>
