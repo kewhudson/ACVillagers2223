@@ -36,9 +36,9 @@ function VillagerDetail() {
     return (
         <div>
             {villagerData.length === 0 &&
-                <div className={"text-center"}>                     /*METTERE LOGO DI CARICAMENTO*/
+                <div className={"text-center"}>
                     <h1>Sto per visualizzare il Villager #{villagerID}</h1>
-                    <h2>CARICAMENTO CARICAMENTO CARICAMENTO</h2>
+                        <img src={require("../../assets/img/loading.gif")} alt="Loading icon" className="w-25"/>
                 </div>
             }
 
@@ -50,14 +50,14 @@ function VillagerDetail() {
 
 
                             <div className="col-md-3 d-flex justify-content-center">
-                                <div className={style.polaroid}>
+                                <div className={style.polaroid} style={{background: villagerData["bubble-color"]}}>
                                 <img src={villagerData['image_uri']} className={style.imgPolaroid} alt={villagerData['name']}/>
                                 </div>
                             </div>
 
                             <div className="col-1 "> </div>
 
-                            <div className="col-md-4 d-flex flex-column justify-content-center">
+                            <div className="col-md-4 d-flex flex-column justify-content-center ms-5 ps-5 ms-md-0 ps-md-0">
                                 <h2 className="fw-bold "> {villagerData['name']['name-EUit']}</h2>
 
                                 <ul className={style.caratteristiche}>

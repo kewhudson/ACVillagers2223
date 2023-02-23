@@ -71,10 +71,12 @@ function RegistryOffice() {
                                         <VillagerTable VillagerList={Object.values(villagerData)}/>
                                 }
                             </div> :
-                            /*METTERE LOGO DI CARICAMENTO*/
+
                             <div>
                                 {   apiError === false ?
-                                    <h1>ATTENDI</h1>
+                                    <div className={"text-center"}>
+                                        <img src={require("../../assets/img/loading.gif")} alt="Loading icon" className="w-25"/>
+                                    </div>
                                     :
                                     <h3 className='text-center'>Si è verificato un errore con il reperimento da API</h3>
                                 }
