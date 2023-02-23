@@ -49,7 +49,7 @@ function VillagerDetail() {
                             <div className="col-2 col-xs-0"> </div>
 
 
-                            <div className="col-3 d-flex justify-content-center">
+                            <div className="col-md-3 d-flex justify-content-center">
                                 <div className={style.polaroid}>
                                 <img src={villagerData.image_uri} className={style.imgPolaroid}/>
                                 </div>
@@ -57,7 +57,7 @@ function VillagerDetail() {
 
                             <div className="col-1 "> </div>
 
-                            <div className="col-4 d-flex flex-column justify-content-center">
+                            <div className="col-md-4 d-flex flex-column justify-content-center">
                                 <h2 className="fw-bold "> {villagerData['name']['name-EUit']}</h2>
 
                                 <ul className={style.caratteristiche}>
@@ -73,7 +73,7 @@ function VillagerDetail() {
 
                         </div>
 
-                        <div className="row mt-5">
+                        <div className="row mt-3">
                             <div className="col d-flex flex-column align-items-center">
                                 <div className={style.thought}> <p className="text-center"><span className='fw-bold'>Motto:</span> {villagerData['catch-translations']['catch-EUit']}</p>  </div>
                                 <p  className="text-center mt-4"><span className='fw-bold'>La sua citazione:</span> "{villagerData['saying']}"</p>
