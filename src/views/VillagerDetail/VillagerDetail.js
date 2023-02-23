@@ -51,7 +51,7 @@ function VillagerDetail() {
 
                             <div className="col-md-3 d-flex justify-content-center">
                                 <div className={style.polaroid}>
-                                <img src={villagerData.image_uri} className={style.imgPolaroid}/>
+                                <img src={villagerData['image_uri']} className={style.imgPolaroid} alt={villagerData['name']}/>
                                 </div>
                             </div>
 
