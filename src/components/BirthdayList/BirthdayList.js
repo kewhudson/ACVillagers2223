@@ -86,7 +86,7 @@ function BirthdayList() {
                         :
                         <h3 className='text-center'>Si è verificato un errore con il reperimento da API</h3>
                     }
-                        </div> /*METTERE LOGO DI CARICAMENTO*/
+                        </div>
             }
 
         </>
