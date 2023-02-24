@@ -29,7 +29,7 @@ function Footer(props){
 
             <div className="row">
 
-                <div className="col">
+                <div className="col-md-5">
                     {<nav className={style.footerNav}>
 
                         <ul className="nav flex-column">
@@ -42,7 +42,7 @@ function Footer(props){
                 </div>
 
 
-                <div className="col">
+                <div className="col-md-7">
 
                     <div className={`d-flex ${style.copyright}`}>
 

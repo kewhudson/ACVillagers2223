@@ -1,3 +1,6 @@
+
+
+
 .footer {
     color: black;
     font-weight: bold;
@@ -49,8 +52,7 @@
     flex-direction: row;
     justify-content: start;
     text-align: left;
-    border-left: 3px solid black;
-    padding-left: 50px;
+    padding-left: 30px;
 }
 
 .footerNav {
@@ -58,4 +60,31 @@
     justify-content: end;
     text-align: right;
     padding-right: 50px;
+    border-right: 3px solid black;
+}
+
+
+@media screen and (max-width: 600px) {
+ .copyright {
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     text-align: center;
+     border-top: 3px solid black;
+     margin-right: 10px;
+     margin-left: 10px;
+     padding: 20px 15px 0px 15px;
+
+ }
+
+    .footerNav {
+        display: flex;
+padding-bottom: 20px;
+        justify-content: center;
+        text-align: center;
+        padding-right: 0px;
+        border-right: 0px;
+
+    }
+
 }
