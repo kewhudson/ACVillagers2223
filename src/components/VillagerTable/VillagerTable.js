@@ -10,10 +10,10 @@ function VillagerTable(props) {
 
     for(let villager = 0; villager < VillagerList.length; villager ++){
         villagerTable.push(
-            <tr key={villager+1} className="d-flex flex-wrap justify-content-around align-items-center">
+            <tr key={villager+1} className="d-flex flex-wrap justify-content-around align-items-center text-center">
 
-                    <td>
-                        <NavLink to={`/RegistryOffice/${villager+1}`}>
+                    <td className="text-center">
+                        <NavLink to={`/RegistryOffice/${villager+1}`} >
                             {VillagerList[villager]['id']}
                         </NavLink>
                     </td>
@@ -24,7 +24,7 @@ function VillagerTable(props) {
                     </td>
                     <td>
                         <NavLink to={`/RegistryOffice/${villager+1}`}>
-                            <img src={VillagerList[villager]['icon_uri']}/>
+                            <img src={VillagerList[villager]['icon_uri']} className={style.villagerIcon}/>
                         </NavLink>
                     </td>
                     <td>
@@ -37,21 +37,23 @@ function VillagerTable(props) {
     }
 
     return (
-        <div className={style.table}>
+
+        <div className={style.tableBC}>
         <table className="d-flex flex-column" >
-            <thead className="mb-2 mt-5 px-4">
-            <tr className="d-flex flex-wrap justify-content-around">
+            <thead>
+            <tr className="mt-5 mb-2 d-flex flex-wrap justify-content-around text-center">
                 <th>ID</th>
                 <th>Nome</th>
                 <th>Immagine</th>
-                <th className="allineamento">Specie</th>
+                <th>Specie</th>
             </tr>
             </thead>
-            <tbody className="my-4 px-4">
+            <tbody className="my-2">
             {villagerTable}
             </tbody>
         </table>
         </div>
+
     );
 }
 

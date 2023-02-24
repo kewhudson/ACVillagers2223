@@ -1,8 +1,38 @@
-.table {
+.tableBC {
     background-image: url("/src/assets/img/ACbackgroundCard.jpg");
     border-radius: 30px;
+    width: 100%;
+}
+
+
+.villagerIcon {
+    width: 10vw;
+}
+
+table {
+    table-layout: fixed;
     width: 100%;
 
 }
 
+th, td {
+    width: 12vw;
+    overflow: hidden;
+}
 
+
+
+@media screen and (max-width: 600px) {
+    table {
+        table-layout: fixed;
+        width: 100%;
+
+    }
+
+    th, td {
+        width: 20vw;
+        overflow: visible;   /* per ora ho lasciato così l'overflow ma non so come rimediare, forse fare un clamp e ridurre il font?*/
+    }
+
+
+}
