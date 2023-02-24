@@ -8,7 +8,6 @@ import genderTranslation from "../../functions/GenderTranslation";
 
 function VillagerDetail() {
 
-
     let {number} = useParams();
     let villagerID = parseInt(number);
 
