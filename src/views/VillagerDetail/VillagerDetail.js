@@ -5,6 +5,7 @@ import speciesTranslation from "../../functions/SpeciesTranslation";
 import personalitiesTranslation from "../../functions/PersonalitiesTranslation";
 import genderTranslation from "../../functions/GenderTranslation";
 import itemIcon from "../../assets/img/star_icon.svg";
+import iconArrow from "../../assets/img/iconArrow.png";
 
 function VillagerDetail() {
 
@@ -50,28 +51,23 @@ function VillagerDetail() {
                             <div className="container">
 
                                 <div className={style.navigation}>
+                                     {villagerID - 1 !== 0 &&
+                                             <NavLink className={`fw-bold ${style.prev}`}
+                                                     to={`/RegistryOffice/${villagerID - 1}`}><img src={iconArrow}/></NavLink>
+                                     }
 
-                                    {villagerID - 1 !== 0 &&
-                                        <NavLink className={`fw-bold ${style.prev}`}
-                                                 to={`/RegistryOffice/${villagerID - 1}`}>&lt;</NavLink>
-                                    }
-
-                                    {villagerID + 1 <= 391 &&
-                                        <NavLink className={`${style.next}`}
-                                                 to={`/RegistryOffice/${villagerID + 1}`}>Next &gt;</NavLink>
-                                    }
+                                      {villagerID + 1 <= 391 &&
+                                             <NavLink className={`${style.next}`}
+                                                    to={`/RegistryOffice/${villagerID + 1}`}> <img src={iconArrow}/> </NavLink>
+                                     }
 
                                 </div>
 
 
 
-
-                                <div className="row  align-items-center mt-4">
+                                <div className="row align-items-center mt-4">
                                     <div className="col-2 col-xs-0">
-                                        {villagerID - 1 !== 0 &&
-                                        <NavLink className={`${style.prev} ${style.navItem}`}
-                                                 to={`/RegistryOffice/${villagerID - 1}`}>&lt;</NavLink>
-                                    }
+
                                     </div>
 
 
@@ -95,7 +91,7 @@ function VillagerDetail() {
 
                                     </div>
 
-                                    <div className="col-2"> </div>
+                                    <div className="col-2  col-xs-0"> </div>
 
                                 </div>
 

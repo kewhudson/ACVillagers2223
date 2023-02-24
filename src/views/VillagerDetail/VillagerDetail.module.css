@@ -98,25 +98,29 @@ margin: 20px;
 
 }
 
-.navigation {
-  width: 100%;
-  display: flex;
-  padding: 4px;
-  text-transform: uppercase;
+.prev img {
+  width: 6vw;
+  transform: scaleX(-1);
+  float: left;
+  padding-top: 10px;
 }
 
-.prev {
-  background-color: #3AB09E;
-  border-radius: 30px;
-  padding: 5px 15px 5px 15px;
+.next img {
+  width: 6vw;
+  float: right;
+  padding-top: 10px;
 }
 
-.next {
-  padding-right: 0;
-  margin-left: auto;
+@media screen and (max-width: 600px) {
+  .prev img {
+    width: 10vw;
+    transform: scaleX(-1);
+  }
 
+  .next img {
+    width: 10vw;
+  }
 }
-
 
 
 @media screen and (max-width: 992px) {
