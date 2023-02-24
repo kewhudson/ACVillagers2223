@@ -13,7 +13,7 @@ function VillagerDetail() {
     let villagerID = parseInt(number);
 
     const [villagerData, setVillagerData] = useState([]);
-
+    const [apiError, setApiError] = useState(false);
 
     /* API CALL */
     useEffect(() => {
@@ -23,10 +23,15 @@ function VillagerDetail() {
         fetch(`https://acnhapi.com/v1/villagers/${villagerID}`)
             .then(res => res.json())
             .then(res => {
-                if (isMounted)
+                if (isMounted) {
+                    setApiError(false);
                     setVillagerData(res);
+                }
             })
-            .catch((error) => console.log("Error" + error));
+            .catch((error) => {
+                console.log("Error" + error)
+                setApiError(true);
+            });
         return () => {
             isMounted = false;
         }
@@ -35,15 +40,8 @@ function VillagerDetail() {
 
     return (
         <div>
-            {villagerData.length === 0 &&
-                <div className={"text-center"}>
-                    <h1>Sto per visualizzare il Villager #{villagerID}</h1>
-                        <img src={require("../../assets/img/loading.gif")} alt="Loading icon" className="w-25"/>
-                </div>
-            }
 
-
-            {villagerData.length !== 0 &&
+            {villagerData.length !== 0 ?
                     <div className="container">
                         <div className="row  align-items-center mt-4">
                             <div className="col-2 col-xs-0"> </div>
@@ -81,15 +79,21 @@ function VillagerDetail() {
 
                         </div>
 
-                    </div>
-
+                    </div> :
+                <div>
+                {
+                    apiError === false ?
+                        <div className={"text-center"}>
+                            <h1>Sto per visualizzare il Villager #{villagerID}</h1>
+                            <img src={require("../../assets/img/loading.gif")} alt="Loading icon" className="w-25"/>
+                        </div>
+                    :
+                    <h3 className='text-center'>Si è verificato un errore con il reperimento da API</h3>
+                }
+                </div>
             }
 
-
-
         </div>
-/* <img src={villagerData.image_uri}/> */
-
     )
 }
 
