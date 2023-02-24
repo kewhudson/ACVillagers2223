@@ -93,7 +93,7 @@ function VillagerDetail() {
                                     <img src={require("../../assets/img/loading.gif")} alt="Loading icon" className="w-25"/>
                                 </div>
                             :
-                            <h3 className='text-center'>Si è verificato un errore con il reperimento da API</h3>
+                            <h3 className='text-center px-5 mx-5'>Si è verificato un errore con il reperimento da API o non hai inserito un valore numerico</h3>
                         }
                         </div>
                     }
