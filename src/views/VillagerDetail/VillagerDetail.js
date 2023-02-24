@@ -41,8 +41,8 @@ function VillagerDetail() {
     <>
         {(villagerID < 0 || villagerID > 391) ?
                 <div className='text-center'>
-                    <h3 className='mx-2'>Ci sono solo 391 abitanti!</h3>
-                    <NavLink className="button mb-4" to="/RegistryOffice">Torna alla lista degli abitanti</NavLink>
+                    <h3 className='mx-2 mb-5'>Ci sono solo 391 abitanti!</h3>
+                    <NavLink className="button mb-4 fw-bold" to="/RegistryOffice">Torna alla lista degli abitanti</NavLink>
                 </div> :
 
                 <>
