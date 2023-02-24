@@ -16,7 +16,7 @@ function Home() {
                          col={{xs: 1, sm: 2, md: 3, lg: 3, xl: 3}}
                      />
 
-                     <div className='mt-3 mb-5 text-center'><NavLink className="button" to="/RegistryOffice">Guarda l'elenco completo</NavLink></div>
+                     <div className='mt-3 mb-5 text-center'><NavLink className="button fw-bold" to="/RegistryOffice">Guarda l'elenco completo</NavLink></div>
 
                      <BirthdayList />
                  </div>

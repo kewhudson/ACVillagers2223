@@ -4,7 +4,8 @@ import style from "./VillagerDetail.module.css";
 import speciesTranslation from "../../functions/SpeciesTranslation";
 import personalitiesTranslation from "../../functions/PersonalitiesTranslation";
 import genderTranslation from "../../functions/GenderTranslation";
-
+import itemIcon from "../../assets/img/star_icon.svg";
+import VillagerListData from "../../assets/data/villagerBaseData.json";
 
 function VillagerDetail() {
 
@@ -48,8 +49,31 @@ function VillagerDetail() {
                 <>
                     {villagerData.length !== 0 ?
                             <div className="container">
+
+                                <div className={style.navigation}>
+
+                                    {villagerID - 1 !== 0 &&
+                                        <NavLink className={`fw-bold ${style.prev}`}
+                                                 to={`/RegistryOffice/${villagerID - 1}`}>&lt;</NavLink>
+                                    }
+
+                                    {villagerID + 1 <= Object.keys(VillagerListData).length &&
+                                        <NavLink className={`${style.next}`}
+                                                 to={`/RegistryOffice/${villagerID + 1}`}>Next &gt;</NavLink>
+                                    }
+
+                                </div>
+
+
+
+
                                 <div className="row  align-items-center mt-4">
-                                    <div className="col-2 col-xs-0"> </div>
+                                    <div className="col-2 col-xs-0">
+                                        {villagerID - 1 !== 0 &&
+                                        <NavLink className={`${style.prev} ${style.navItem}`}
+                                                 to={`/RegistryOffice/${villagerID - 1}`}>&lt;</NavLink>
+                                    }
+                                    </div>
 
 
                                     <div className="col-md-3 d-flex justify-content-center">
@@ -61,13 +85,13 @@ function VillagerDetail() {
                                     <div className="col-1 "> </div>
 
                                     <div className="col-sm-8 col-md-4 d-flex flex-column justify-content-center ps-5 pt-3 pt-sm-0 ms-sm-3 ps-sm-5 ms-md-0 ps-md-0">
-                                        <h2 className="fw-bold "> {villagerData['name']['name-EUit']}</h2>
+                                        <h2 className="fw-bold ms-5"> {villagerData['name']['name-EUit']}</h2>
 
                                         <ul className={style.caratteristiche}>
-                                            <li className={style.cuore}> <span className='fw-bold'>Specie:</span> {speciesTranslation(villagerData['species'])}</li>
-                                            <li className={style.cuore}> <span className='fw-bold'>Compleanno</span>: {villagerData['birthday']}</li>
-                                            <li className={style.cuore}> <span className='fw-bold'>Genere:</span> {genderTranslation(villagerData['gender'])} </li>
-                                            <li className={style.cuore}> <span className='fw-bold'>Personalità:</span> {personalitiesTranslation(villagerData['personality'])} </li>
+                                            <li> <img src={itemIcon} className={style.starIcon}/> <span className='fw-bold'>Specie:</span> {speciesTranslation(villagerData['species'])}</li>
+                                            <li> <img src={itemIcon} className={style.starIcon}/> <span className='fw-bold'>Compleanno</span>: {villagerData['birthday']}</li>
+                                            <li> <img src={itemIcon} className={style.starIcon}/> <span className='fw-bold'>Genere:</span> {genderTranslation(villagerData['gender'])} </li>
+                                            <li> <img src={itemIcon} className={style.starIcon}/> <span className='fw-bold'>Personalità:</span> {personalitiesTranslation(villagerData['personality'])} </li>
                                         </ul>
 
                                     </div>

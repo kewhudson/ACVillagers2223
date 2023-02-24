@@ -21,6 +21,17 @@ li{
   padding: 0 0 0 24px;
 }
 
+.starIcon {
+  width: 20px;
+  height: 20px;
+  margin-bottom: 5px;
+}
+
+
+
+
+
+/*
 .cuore::before, .cuore::after{
   content: "";
   position: absolute;
@@ -42,7 +53,7 @@ li{
   transform: rotate(45deg);
   transform-origin: 100% 100%;
 }
-
+*/
 
 .thought {
   display:flex;
@@ -87,8 +98,24 @@ margin: 20px;
 
 }
 
+.navigation {
+  width: 100%;
+  display: flex;
+  padding: 4px;
+  text-transform: uppercase;
+}
 
+.prev {
+  background-color: #3AB09E;
+  border-radius: 30px;
+  padding: 5px 15px 5px 15px;
+}
 
+.next {
+  padding-right: 0;
+  margin-left: auto;
+
+}
 
 
 
