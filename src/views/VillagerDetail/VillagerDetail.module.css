@@ -3,6 +3,7 @@
     box-shadow: 0 6px 6px rgba(0, 0, 0, .3);
     max-width: 100%;
     transform: rotate(-0.02turn);
+    background-color: #FDF5E6 !important;
 }
 
 .imgPolaroid {
@@ -17,7 +18,7 @@
 li{
   list-style: none;
   position: relative;
-  padding: 0px 0 0 24px;
+  padding: 0 0 0 24px;
 }
 
 .cuore::before, .cuore::after{
@@ -27,7 +28,7 @@ li{
   top: 5px;
   width: 7px;
   height: 12px;
-  background:  #3AB09E;
+  background:  #FDF5E6;
   border-radius: 50px 50px 0 0;
   transform: rotate(-45deg);
   transform-origin: 0 100%;
@@ -45,7 +46,7 @@ li{
 
 .thought {
   display:flex;
-  background-color:#3AB09E;
+  background-color:#FDF5E6;
   padding: 24px 20px 16px 20px;
   border-radius:30px;
   min-width:40px;
@@ -61,7 +62,7 @@ margin: 20px;
 .thought:before,
 .thought:after {
   content:"";
-  background-color:#3AB09E;
+  background-color:#FDF5E6;
   border-radius:50%;
   display:block;
   position:absolute;
@@ -72,17 +73,17 @@ margin: 20px;
   height:44px;
   top:-12px;
   left:28px;
-  box-shadow:-50px 30px 0 -12px #3AB09E;
+  box-shadow:-50px 30px 0 -12px #FDF5E6;
 }
 .thought:after {
   bottom:-10px;
   right:26px;
   width:30px;
   height:30px;
-  box-shadow:40px -34px 0 0 #3AB09E,
-  -28px -6px 0 -2px #3AB09E,
-  -24px 17px 0 -6px #3AB09E,
-  -5px 25px 0 -10px #3AB09E;
+  box-shadow:40px -34px 0 0 #FDF5E6,
+  -28px -6px 0 -2px #FDF5E6,
+  -24px 17px 0 -6px #FDF5E6,
+  -5px 25px 0 -10px #FDF5E6;
 
 }
 

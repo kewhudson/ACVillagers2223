@@ -48,14 +48,14 @@ function VillagerDetail() {
 
 
                             <div className="col-md-3 d-flex justify-content-center">
-                                <div className={style.polaroid} style={{background: villagerData["bubble-color"]}}>
+                                <div className={style.polaroid} /*style={{background: villagerData["bubble-color"]}}*/>
                                 <img src={villagerData['image_uri']} className={style.imgPolaroid} alt={villagerData['name']}/>
                                 </div>
                             </div>
 
                             <div className="col-1 "> </div>
 
-                            <div className="col-md-4 d-flex flex-column justify-content-center ps-5 pt-3 pt-sm-0 ms-sm-5 ps-sm-5 ms-md-0 ps-md-0">
+                            <div className="col-sm-8 col-md-4 d-flex flex-column justify-content-center ps-5 pt-3 pt-sm-0 ms-sm-3 ps-sm-5 ms-md-0 ps-md-0">
                                 <h2 className="fw-bold "> {villagerData['name']['name-EUit']}</h2>
 
                                 <ul className={style.caratteristiche}>
