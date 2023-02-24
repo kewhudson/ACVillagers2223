@@ -5,7 +5,6 @@ import speciesTranslation from "../../functions/SpeciesTranslation";
 import personalitiesTranslation from "../../functions/PersonalitiesTranslation";
 import genderTranslation from "../../functions/GenderTranslation";
 import itemIcon from "../../assets/img/star_icon.svg";
-import VillagerListData from "../../assets/data/villagerBaseData.json";
 
 function VillagerDetail() {
 
@@ -57,7 +56,7 @@ function VillagerDetail() {
                                                  to={`/RegistryOffice/${villagerID - 1}`}>&lt;</NavLink>
                                     }
 
-                                    {villagerID + 1 <= Object.keys(VillagerListData).length &&
+                                    {villagerID + 1 <= 391 &&
                                         <NavLink className={`${style.next}`}
                                                  to={`/RegistryOffice/${villagerID + 1}`}>Next &gt;</NavLink>
                                     }
@@ -88,10 +87,10 @@ function VillagerDetail() {
                                         <h2 className="fw-bold ms-5"> {villagerData['name']['name-EUit']}</h2>
 
                                         <ul className={style.caratteristiche}>
-                                            <li> <img src={itemIcon} className={style.starIcon}/> <span className='fw-bold'>Specie:</span> {speciesTranslation(villagerData['species'])}</li>
-                                            <li> <img src={itemIcon} className={style.starIcon}/> <span className='fw-bold'>Compleanno</span>: {villagerData['birthday']}</li>
-                                            <li> <img src={itemIcon} className={style.starIcon}/> <span className='fw-bold'>Genere:</span> {genderTranslation(villagerData['gender'])} </li>
-                                            <li> <img src={itemIcon} className={style.starIcon}/> <span className='fw-bold'>Personalità:</span> {personalitiesTranslation(villagerData['personality'])} </li>
+                                            <li> <img src={itemIcon} className={style.starIcon} alt='star icon'/> <span className='fw-bold'>Specie:</span> {speciesTranslation(villagerData['species'])}</li>
+                                            <li> <img src={itemIcon} className={style.starIcon} alt='star icon'/> <span className='fw-bold'>Compleanno</span>: {villagerData['birthday']}</li>
+                                            <li> <img src={itemIcon} className={style.starIcon} alt='star icon'/> <span className='fw-bold'>Genere:</span> {genderTranslation(villagerData['gender'])} </li>
+                                            <li> <img src={itemIcon} className={style.starIcon} alt='star icon'/> <span className='fw-bold'>Personalità:</span> {personalitiesTranslation(villagerData['personality'])} </li>
                                         </ul>
 
                                     </div>
