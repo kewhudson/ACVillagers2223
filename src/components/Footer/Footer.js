@@ -24,7 +24,7 @@ function Footer(props){
 
     return(
         <footer className={style.footer}>
-        <img src={footerImg} className={'mb-4'} alt={'Personaggi di Animal Crossing'}/>
+        <img src={footerImg} className={`mb-4 ${style.imgFooter}`} alt={'Personaggi di Animal Crossing'} />
         <div className="container-fluid">
 
             <div className="row">

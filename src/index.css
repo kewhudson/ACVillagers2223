@@ -50,3 +50,21 @@ footer{
 :not(.activeRouterLink), :not(.activeRouterLink):hover{
 color: black;
 }
+
+
+.button {
+    background-color: #FDF5E6;
+    border: 3px solid;
+    border-color: #FDF5E6;
+    border-radius: 40px;
+    padding: 20px 20px 20px 20px;
+}
+
+
+.button:hover {
+    color: black;
+    background:#3AB09E;
+    border-color: #3AB09E;
+    text-decoration-line: none;
+}
+
