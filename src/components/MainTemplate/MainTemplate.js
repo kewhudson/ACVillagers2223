@@ -13,22 +13,20 @@ function MainTemplate(props) {
 
     return(
         <>
+            <Header
+                logo={logo}
+                navItems={navItems}
+            />
 
-        <Header
-            logo={logo}
+                <div className="my-5">
+                {children}
+                </div>
+
+            <Footer
+            courseName = {footerCourseName}
+            courseLink = {footerCourseLink}
             navItems={navItems}
-        />
-
-            <div className="my-5">
-            {children}
-            </div>
-
-        <Footer
-        courseName = {footerCourseName}
-        courseLink = {footerCourseLink}
-        navItems={navItems}
-        />
-
+            />
         </>
     )
 }
