@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/ACVillagers2223/Home/static/css/main.d7423c06.css",
-    "main.js": "/ACVillagers2223/Home/static/js/main.d0c83066.js",
-    "static/js/787.1fa4ad48.chunk.js": "/ACVillagers2223/Home/static/js/787.1fa4ad48.chunk.js",
-    "static/media/ACbackgroundCard.jpg": "/ACVillagers2223/Home/static/media/ACbackgroundCard.8975cb216c8cf1a0ac95.jpg",
-    "static/media/loading.gif": "/ACVillagers2223/Home/static/media/loading.4f00b316295aad52958e.gif",
-    "static/media/resetti-not-found.png": "/ACVillagers2223/Home/static/media/resetti-not-found.670072ef5ae24bdedf98.png",
-    "static/media/ac-sky.png": "/ACVillagers2223/Home/static/media/ac-sky.c376d87c2bba3b107ee2.png",
-    "static/media/background-AC-Personaggi.jpg": "/ACVillagers2223/Home/static/media/background-AC-Personaggi.7829212f73075f7e7d77.jpg",
-    "static/media/background-AC-Sfondo.jpg": "/ACVillagers2223/Home/static/media/background-AC-Sfondo.8c7a9f450a7942c66c48.jpg",
-    "static/media/background-AC-Terra.jpg": "/ACVillagers2223/Home/static/media/background-AC-Terra.e9b0579b8df704722062.jpg",
-    "static/media/logo-unimib-disco.png": "/ACVillagers2223/Home/static/media/logo-unimib-disco.28bed03389298a56d0e2.png",
-    "static/media/IconArrow.png": "/ACVillagers2223/Home/static/media/IconArrow.050668bf6f3bc313958f.png",
-    "static/media/logo-unimib.png": "/ACVillagers2223/Home/static/media/logo-unimib.3eeca5e67f1ad85d9a5e.png",
-    "index.html": "/ACVillagers2223/Home/index.html",
-    "static/media/Animal_Crossing_Leaf.svg": "/ACVillagers2223/Home/static/media/Animal_Crossing_Leaf.495348dc30e858227174ac7f26a34949.svg",
-    "static/media/star_icon.svg": "/ACVillagers2223/Home/static/media/star_icon.dc2f9d4c00f27733cb90a674955eb812.svg",
-    "main.d7423c06.css.map": "/ACVillagers2223/Home/static/css/main.d7423c06.css.map",
-    "main.d0c83066.js.map": "/ACVillagers2223/Home/static/js/main.d0c83066.js.map",
-    "787.1fa4ad48.chunk.js.map": "/ACVillagers2223/Home/static/js/787.1fa4ad48.chunk.js.map"
+    "main.css": "/ACVillagers2223/static/css/main.ea6e05fe.css",
+    "main.js": "/ACVillagers2223/static/js/main.93dc9c0d.js",
+    "static/js/787.1fa4ad48.chunk.js": "/ACVillagers2223/static/js/787.1fa4ad48.chunk.js",
+    "static/media/ACbackgroundCard.jpg": "/ACVillagers2223/static/media/ACbackgroundCard.8975cb216c8cf1a0ac95.jpg",
+    "static/media/loading.gif": "/ACVillagers2223/static/media/loading.4f00b316295aad52958e.gif",
+    "static/media/resetti-not-found.png": "/ACVillagers2223/static/media/resetti-not-found.670072ef5ae24bdedf98.png",
+    "static/media/ac-sky.png": "/ACVillagers2223/static/media/ac-sky.c376d87c2bba3b107ee2.png",
+    "static/media/background-AC-Personaggi.jpg": "/ACVillagers2223/static/media/background-AC-Personaggi.7829212f73075f7e7d77.jpg",
+    "static/media/background-AC-Sfondo.jpg": "/ACVillagers2223/static/media/background-AC-Sfondo.8c7a9f450a7942c66c48.jpg",
+    "static/media/background-AC-Terra.jpg": "/ACVillagers2223/static/media/background-AC-Terra.e9b0579b8df704722062.jpg",
+    "static/media/logo-unimib-disco.png": "/ACVillagers2223/static/media/logo-unimib-disco.28bed03389298a56d0e2.png",
+    "static/media/IconArrow.png": "/ACVillagers2223/static/media/IconArrow.050668bf6f3bc313958f.png",
+    "static/media/logo-unimib.png": "/ACVillagers2223/static/media/logo-unimib.3eeca5e67f1ad85d9a5e.png",
+    "static/media/Animal_Crossing_Leaf.svg": "/ACVillagers2223/static/media/Animal_Crossing_Leaf.495348dc30e858227174ac7f26a34949.svg",
+    "index.html": "/ACVillagers2223/index.html",
+    "static/media/star_icon.svg": "/ACVillagers2223/static/media/star_icon.dc2f9d4c00f27733cb90a674955eb812.svg",
+    "main.ea6e05fe.css.map": "/ACVillagers2223/static/css/main.ea6e05fe.css.map",
+    "main.93dc9c0d.js.map": "/ACVillagers2223/static/js/main.93dc9c0d.js.map",
+    "787.1fa4ad48.chunk.js.map": "/ACVillagers2223/static/js/787.1fa4ad48.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d7423c06.css",
-    "static/js/main.d0c83066.js"
+    "static/css/main.ea6e05fe.css",
+    "static/js/main.93dc9c0d.js"
   ]
 }
