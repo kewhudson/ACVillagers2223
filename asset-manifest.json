@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ACVillagers2223/static/css/main.ea6e05fe.css",
-    "main.js": "/ACVillagers2223/static/js/main.7e7d446d.js",
+    "main.js": "/ACVillagers2223/static/js/main.ced9184b.js",
     "static/js/787.1fa4ad48.chunk.js": "/ACVillagers2223/static/js/787.1fa4ad48.chunk.js",
     "static/media/ACbackgroundCard.jpg": "/ACVillagers2223/static/media/ACbackgroundCard.8975cb216c8cf1a0ac95.jpg",
     "static/media/loading.gif": "/ACVillagers2223/static/media/loading.4f00b316295aad52958e.gif",
@@ -17,11 +17,11 @@
     "static/media/Animal_Crossing_Leaf.svg": "/ACVillagers2223/static/media/Animal_Crossing_Leaf.495348dc30e858227174ac7f26a34949.svg",
     "static/media/star_icon.svg": "/ACVillagers2223/static/media/star_icon.dc2f9d4c00f27733cb90a674955eb812.svg",
     "main.ea6e05fe.css.map": "/ACVillagers2223/static/css/main.ea6e05fe.css.map",
-    "main.7e7d446d.js.map": "/ACVillagers2223/static/js/main.7e7d446d.js.map",
+    "main.ced9184b.js.map": "/ACVillagers2223/static/js/main.ced9184b.js.map",
     "787.1fa4ad48.chunk.js.map": "/ACVillagers2223/static/js/787.1fa4ad48.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ea6e05fe.css",
-    "static/js/main.7e7d446d.js"
+    "static/js/main.ced9184b.js"
   ]
 }
