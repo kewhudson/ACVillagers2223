@@ -53,12 +53,12 @@ function VillagerDetail() {
                                 <div className={style.navigation}>
                                      {villagerID - 1 !== 0 &&
                                              <NavLink className={`fw-bold ${style.prev}`}
-                                                     to={`/RegistryOffice/${villagerID - 1}`}><img src={IconArrow}/></NavLink>
+                                                     to={`/RegistryOffice/${villagerID - 1}`}><img src={IconArrow} alt='Icon Arrow'/></NavLink>
                                      }
 
                                       {villagerID + 1 <= 391 &&
                                              <NavLink className={`${style.next}`}
-                                                    to={`/RegistryOffice/${villagerID + 1}`}> <img src={IconArrow}/> </NavLink>
+                                                    to={`/RegistryOffice/${villagerID + 1}`}> <img src={IconArrow} alt='Icon Arrow'/> </NavLink>
                                      }
 
                                 </div>
@@ -112,7 +112,7 @@ function VillagerDetail() {
                                     <img src={require("../../assets/img/loading.gif")} alt="Loading icon" className="w-25"/>
                                 </div>
                             :
-                            <h3 className='text-center px-5 mx-5'>Si è verificato un errore con il reperimento da API o non hai inserito un valore numerico</h3>
+                            <h3 className='text-center px-5 mx-5'>Si è verificato un errore con il reperimento da API. Assicurati di essere connesso alla rete o di aver inserito un valore numerico</h3>
                         }
                         </div>
                     }
