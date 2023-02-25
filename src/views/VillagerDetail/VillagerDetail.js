@@ -5,7 +5,7 @@ import speciesTranslation from "../../functions/SpeciesTranslation";
 import personalitiesTranslation from "../../functions/PersonalitiesTranslation";
 import genderTranslation from "../../functions/GenderTranslation";
 import itemIcon from "../../assets/img/star_icon.svg";
-import iconArrow from "../../assets/img/iconArrow.png";
+import IconArrow from "../../assets/img/IconArrow.png";
 
 function VillagerDetail() {
 
@@ -53,12 +53,12 @@ function VillagerDetail() {
                                 <div className={style.navigation}>
                                      {villagerID - 1 !== 0 &&
                                              <NavLink className={`fw-bold ${style.prev}`}
-                                                     to={`/RegistryOffice/${villagerID - 1}`}><img src={iconArrow}/></NavLink>
+                                                     to={`/RegistryOffice/${villagerID - 1}`}><img src={IconArrow}/></NavLink>
                                      }
 
                                       {villagerID + 1 <= 391 &&
                                              <NavLink className={`${style.next}`}
-                                                    to={`/RegistryOffice/${villagerID + 1}`}> <img src={iconArrow}/> </NavLink>
+                                                    to={`/RegistryOffice/${villagerID + 1}`}> <img src={IconArrow}/> </NavLink>
                                      }
 
                                 </div>
