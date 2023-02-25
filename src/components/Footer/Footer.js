@@ -12,7 +12,6 @@ function Footer(props){
         return (
             <li key={item.url} className="nav-item">
                 <NavLink exact={item.exact}
-                         activeClassName={style.active}
                          className={style.footerNavLink}
                          to={item.url}>
                     {item.text}
