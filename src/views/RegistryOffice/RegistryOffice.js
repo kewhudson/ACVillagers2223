@@ -10,7 +10,6 @@ function RegistryOffice() {
     const [villagerData, setVillagerData] = useState([]);
     const [apiError, setApiError] = useState(false);
 
-
     /* API CALL */
     useEffect(() => {
 

@@ -1,5 +1,5 @@
 import React from "react";
-import unimib from "../../assets/img/logo-unimib.png";
+import unimib from "../../assets/img/logo-unimib.jpg";
 import disco from "../../assets/img/logo-unimib-disco.png";
 import style from "./Footer.module.css";
 import  {NavLink} from "react-router-dom";
@@ -26,10 +26,10 @@ function Footer(props){
         <img src={footerImg} className={`mb-4 ${style.imgFooter}`} alt={'Personaggi di Animal Crossing'} />
         <div className="container-fluid">
 
-            <div className="row">
+            <div className="row align-items-center">
                 <div className="col-md-5">
                     {<nav className={style.footerNav}>
-                        <ul className="nav flex-column">
+                        <ul className="nav">
                             {itemList}
                         </ul>
                     </nav>}

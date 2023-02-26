@@ -60,16 +60,10 @@ function VillagerDetail() {
                                              <NavLink className={`${style.next}`}
                                                     to={`/RegistryOffice/${villagerID + 1}`}> <img src={IconArrow} alt='Icon Arrow'/> </NavLink>
                                      }
-
                                 </div>
 
-
-
                                 <div className="row align-items-center mt-4">
-                                    <div className="col-2 col-xs-0">
-
-                                    </div>
-
+                                    <div className="col-2 col-xs-0"> </div>
 
                                     <div className="col-md-3 d-flex justify-content-center">
                                         <div className={style.polaroid} /*style={{background: villagerData["bubble-color"]}}*/>
@@ -92,7 +86,6 @@ function VillagerDetail() {
                                     </div>
 
                                     <div className="col-2  col-xs-0"> </div>
-
                                 </div>
 
                                 <div className="row mt-3">
@@ -100,9 +93,7 @@ function VillagerDetail() {
                                         <div className={style.thought}> <p className="text-center"><span className='fw-bold'>Motto:</span> {villagerData['catch-translations']['catch-EUit']}</p>  </div>
                                         <p  className="text-center mt-4"><span className='fw-bold'>La sua citazione:</span> "{villagerData['saying']}"</p>
                                     </div>
-
                                 </div>
-
                             </div> :
                         <div>
                         {
