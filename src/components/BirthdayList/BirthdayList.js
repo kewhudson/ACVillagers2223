@@ -19,9 +19,7 @@ function BirthdayList() {
 
     /* API CALL */
     useEffect(() => {
-
         let isMounted = true;
-
         fetch(`https://acnhapi.com/v1/villagers/`)
             .then(res => res.json())
             .then(res => {
@@ -45,7 +43,6 @@ function BirthdayList() {
                                     </Card>
                                 </NavLink>
                             );
-
                         }
                     }
                     if (birthdayTemp.length === 0){
@@ -75,7 +72,6 @@ function BirthdayList() {
                         <div className={`row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 mt-4`}>
                             {birthdayData}
                         </div>
-
                         :
                         <div>
                     {
