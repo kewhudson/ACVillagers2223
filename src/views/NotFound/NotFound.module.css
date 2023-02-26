@@ -1,5 +1,11 @@
-.img{
+.imgMr{
     width: clamp(200px, 40vw, 475px);
     display: block;
     margin: 0 auto;
+}
+
+.imgDon{
+    height: clamp(185px, 30vw, 440px);
+    display: block;
+    margin: 50px auto 0 auto;
 }
