@@ -1,7 +1,7 @@
 import React from "react";
 import MainTemplate from "../../components/MainTemplate/MainTemplate";
 import Home from "../Home/Home";
-import {BrowserRouter, Route, Routes} from 'react-router-dom';
+import {BrowserRouter, Route, Routes, Navigate} from 'react-router-dom';
 import Info from "../Info/Info";
 import RegistryOffice from "../RegistryOffice/RegistryOffice";
 import VillagerDetail from "../VillagerDetail/VillagerDetail";
@@ -32,7 +32,8 @@ function App() {
              <Route path="/RegistryOffice" element={<RegistryOffice />} />
              <Route path="/Info" element={<Info />}/>
              <Route path="/RegistryOffice/:number" element={<VillagerDetail />}/>
-             <Route path="*" element={<NotFound />} />
+             <Route path="/404" element={<NotFound />}/>
+             <Route path="*" element={<Navigate to="/404" />} />
            </Routes>
              </ScrollToTop>
 
