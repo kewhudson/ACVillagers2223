@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.698d3fca.css",
-    "main.js": "/static/js/main.3251aebd.js",
+    "main.css": "/static/css/main.86efcc74.css",
+    "main.js": "/static/js/main.fe36573b.js",
     "static/js/787.1fa4ad48.chunk.js": "/static/js/787.1fa4ad48.chunk.js",
     "static/media/ACbackgroundCard.jpg": "/static/media/ACbackgroundCard.8975cb216c8cf1a0ac95.jpg",
     "static/media/loading.gif": "/static/media/loading.4f00b316295aad52958e.gif",
@@ -13,15 +13,16 @@
     "static/media/background-AC-Terra.jpg": "/static/media/background-AC-Terra.e9b0579b8df704722062.jpg",
     "static/media/logo-unimib-disco.png": "/static/media/logo-unimib-disco.28bed03389298a56d0e2.png",
     "static/media/IconArrow.png": "/static/media/IconArrow.050668bf6f3bc313958f.png",
+    "static/media/ac-house.png": "/static/media/ac-house.efb61ee91b0e95f2738e.png",
     "static/media/Animal_Crossing_Leaf.svg": "/static/media/Animal_Crossing_Leaf.495348dc30e858227174ac7f26a34949.svg",
     "index.html": "/index.html",
     "static/media/star_icon.svg": "/static/media/star_icon.dc2f9d4c00f27733cb90a674955eb812.svg",
-    "main.698d3fca.css.map": "/static/css/main.698d3fca.css.map",
-    "main.3251aebd.js.map": "/static/js/main.3251aebd.js.map",
+    "main.86efcc74.css.map": "/static/css/main.86efcc74.css.map",
+    "main.fe36573b.js.map": "/static/js/main.fe36573b.js.map",
     "787.1fa4ad48.chunk.js.map": "/static/js/787.1fa4ad48.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.698d3fca.css",
-    "static/js/main.3251aebd.js"
+    "static/css/main.86efcc74.css",
+    "static/js/main.fe36573b.js"
   ]
 }
