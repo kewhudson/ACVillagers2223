@@ -12,6 +12,6 @@ Per eseguirla è necessario scaricare l'intera cartella "BuildACVillagers2223" e
 
 Il sito visualizzabile è disponibile su [GitHub Pages](https://kewhudson.github.io).
 
-Per navigarlo è necessario utilizzare la barra di navigazioni e gli elementi presenti all'interno del sito.
+Per navigarlo è necessario utilizzare la NavBar e gli elementi presenti all'interno del sito.
 
 La navigazione diretta tramite URI e la pagina 404 non sono funzionanti, per visualizzarle è necessario scaricare il codice sorgente o la build.
