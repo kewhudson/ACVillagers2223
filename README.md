@@ -8,6 +8,10 @@ La build è disponibile su [Google Drive](https://drive.google.com/drive/folders
 
 Per eseguirla è necessario scaricare l'intera cartella "BuildACVillagers2223" ed eseguire i seguenti comandi su Terminale/Prompt dei comandi:
 
+- cd percorsoCartellaBuildACVillagers2223
+- npm install -g serve 
+- npx serve -s build
+
 ## Sito visualizzabile
 
 Il sito visualizzabile è disponibile su [GitHub Pages](https://kewhudson.github.io).
