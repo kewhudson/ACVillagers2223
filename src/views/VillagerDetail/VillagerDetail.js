@@ -78,7 +78,7 @@ function VillagerDetail() {
 
                                         <ul className={style.caratteristiche}>
                                             <li> <img src={itemIcon} className={style.starIcon} alt='star icon'/> <span className='fw-bold'>Specie:</span> {speciesTranslation(villagerData['species'])}</li>
-                                            <li> <img src={itemIcon} className={style.starIcon} alt='star icon'/> <span className='fw-bold'>Compleanno</span>: {villagerData['birthday']}</li>
+                                            <li> <img src={itemIcon} className={style.starIcon} alt='star icon'/> <span className='fw-bold'>Compleanno:</span> {villagerData['birthday']}</li>
                                             <li> <img src={itemIcon} className={style.starIcon} alt='star icon'/> <span className='fw-bold'>Genere:</span> {genderTranslation(villagerData['gender'])} </li>
                                             <li> <img src={itemIcon} className={style.starIcon} alt='star icon'/> <span className='fw-bold'>Personalità:</span> {personalitiesTranslation(villagerData['personality'])} </li>
                                         </ul>
